@@ -1,0 +1,517 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../asset/martabak-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 10px 8%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(2px);
+}
+
+.logo {
+    width: 80px;
+    cursor: pointer;
+    margin-right: 10%;
+}
+
+nav button {
+    border: none;
+    outline: none;
+    background-color: #db0001;
+    color: #fff;
+    padding: 7px 24px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+nav button:hover{
+    background-color: #ffffff;
+    color: #000;
+}
+
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li a:hover{
+    color: #db0001;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 7px 24px;
+}
+
+.lang-btn img {
+    width: 10px;
+    margin-left: 10px;
+}
+
+.header-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
+}
+
+.header-content h1 {
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 650px;
+}
+
+.header-content h3 {
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.email-signup {
+    align-items: center;
+    margin-top: 30px;
+}
+
+.email-signup button {
+    background-color: #db0001;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 7px 24px;
+}
+
+
+.features {
+    padding: 50px 12%;
+    font-size: 22px;
+}
+
+.features img{
+    width: 80%;
+    height: 90%;
+
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.text-col, .img-col {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.img-col img {
+    display: block;
+    width: 90%;
+    margin: auto;
+    border-radius: 4px;
+}
+
+.features h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.faq {
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.faq h2 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.accordion {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after {
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.accordion .content {
+    background-color: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked + label + .content {
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.accordion input[type="radio"]:checked + label::after {
+    transform: rotate(135deg);
+}
+
+.accordion input[type="radio"]:checked + label::before {
+    transform: rotate(135deg);
+}
+
+.faq small {
+    font-size: 13px;
+}
+
+.faq .email-signup {
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+
+.footer {
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+}
+
+.footer h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.footer .col {
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.footer .col a {
+    display: block;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.footer .col a:hover{
+    color: #fff;
+}
+
+.footer .row {
+    align-items: flex-start;
+    padding: 10px 0px;
+}
+
+.footer .lang-btn {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+.copyright-text {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/*---------- product page ----------*/
+
+.product-nav{
+    width: 100%;
+    position: relative;
+    padding: 10px 8%;
+}
+
+.product-header{
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../asset/martabak-hero.jpg);
+    background-size: cover;
+    width: 70%;
+    height: 250px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px 8%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.container-scrolling {
+    max-width: 1400px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  
+.scrolling-title {
+    font-size: 32px;
+    margin-bottom: 1em;
+    text-align: center;
+    margin-top: 40px;
+}
+  
+  .cards {
+    display: grid;
+    grid-auto-columns: 100%;
+    grid-column-gap: 10px;
+    grid-auto-flow: column;
+    padding: 25px 0px;
+    list-style: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    margin-bottom: 40px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+    scroll-snap-align: start;
+    transition: all 0.2s;
+    align-items: center;
+  }
+  
+  .card:hover {
+    background: #e23334;
+  }
+  
+  .card .card-title {
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .card .card-content {
+    margin: 20px 0;
+    max-width: 85%;
+    color: #000;
+  }
+
+  .card-content img{
+    width: 100%;
+    margin-left: 18px;
+    height: 150px;
+    border-radius: 8px;
+  }
+  
+  .card .card-link-wrapper {
+    margin-top: auto;
+  }
+  
+  .card .card-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: #db0001;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+  
+  .card:hover .card-link {
+    background: #af0001;
+  }
+  
+  .cards::-webkit-scrollbar {
+    height: 12px;
+  }
+  
+  .cards::-webkit-scrollbar-thumb,
+  .cards::-webkit-scrollbar-track {
+    border-radius: 92px;
+  }
+  
+  .cards::-webkit-scrollbar-thumb {
+    background: #db0001;
+  }
+  
+  .cards::-webkit-scrollbar-track {
+    background: #edf2f4;
+  }
+
+/*---------- product page ----------*/
+
+.about-nav{
+    width: 100%;
+    position: relative;
+    padding: 10px 8%;
+}
+
+.text-col {
+    font-size: 16px;
+}
+
+
+
+
+
+
+  
+  @media (min-width: 500px) {
+    .cards {
+      grid-auto-columns: calc(50% - 10px);
+      grid-column-gap: 20px;
+    }
+  }
+  
+  @media (min-width: 700px) {
+    .cards {
+      grid-auto-columns: calc(calc(100% / 3) - 20px);
+      grid-column-gap: 30px;
+    }
+  }
+  
+  @media (min-width: 1100px) {
+    .cards {
+      grid-auto-columns: calc(25% - 30px);
+      grid-column-gap: 40px;
+    }
+  }
+  
+
+
+
+@media only screen and (max-width: 600px) {
+    .logo {
+        width: 100px;
+    }
+
+    nav button {
+        padding: 5px 10px;
+    }
+
+    nav .lang-btn {
+        padding: 4px 8px;
+    }
+
+    .header-content {
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+    }
+
+    .header-content h1 {
+        font-size: 30px;
+    }
+
+    .email-signup button {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    .text-col, .img-col {
+        flex-basis: 100%;
+    }
+
+    .features h2 {
+        font-size: 30px;
+    }
+
+    .features p {
+        font-size: 15px;
+    }
+
+    .row:nth-child(2), .row:nth-child(4) {
+        flex-direction: column-reverse;
+    }
+
+    .features .row {
+        padding: 10px 0;
+    }
+
+    .faq h2 {
+        font-size: 20px;
+    }
+
+    .accordion .content {
+        font-size: 14px;
+    }
+
+    .accordion li label {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    label::after {
+        font-size: 22px;
+    }
+}
+
