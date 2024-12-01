@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/391827d54c.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="../asset/logo.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="../style/style.css">
+        <title>Martabak Jakarta 1994</title>
+    </head>
+<body>
+    <script>
+        function updateButtonState() {
+            const buttons = [
+                { id: 'loginButton', originalText: 'Login' },
+                { id: 'signUpButton', originalText: 'Sign Up' },
+                { id: 'mulaiButton', originalText: 'Mulai' }
+            ];
+
+            const currentDateTime = new Date();
+            // Konversi waktu ke zona waktu WIB (UTC+7)
+            const wibTime = new Date(currentDateTime.toLocaleString('en-US', { timeZone: 'Asia/Jakarta' }));
+            const hours = wibTime.getHours();
+
+            buttons.forEach(button => {
+                const btnElement = document.getElementById(button.id);
+                if (hours >= 0 && hours < 12) {
+                    btnElement.disabled = true;
+                    btnElement.textContent = 'Close';
+                } else {
+                    btnElement.disabled = false;
+                    btnElement.textContent = button.originalText;
+                }
+            });
+        }
+
+        window.onload = function() {
+            updateButtonState();
+            // Cek setiap menit untuk memperbarui status tombol
+            setInterval(updateButtonState, 60000);
+        }
+    </script>
+    <div class="about-nav">
+        <nav>
+            <img class="logo" src="../asset/logo.jpg" alt="logo">
+            <ul id="MenuItems">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./product.php">Product</a></li>
+                <li><a href="./about.html">About</a></li>
+            </ul>
+            <div>
+                <a href="../login/login.php"><button id="loginButton">Login</button></a>
+                <a href="../login/register.php"><button class="lang-btn" id="signUpButton">Sign Up</button></a>
+            </div>
+        </nav>
+
+        <div class="features">
+            <div class="row">
+                <div class="img-col">
+                    <img src="../asset/logo.jpg" alt="feature-2">
+                </div>
+                <div class="text-col">
+                    <h2>Martabak Jakarta 1994</h2>
+                    <p>A"Martabak Jakarta 1994" adalah usaha kuliner yang berfokus pada penjualan martabak, 
+                        salah satu makanan jalanan paling populer di Indonesia. Martabak sendiri terbagi menjadi 
+                        dua jenis utama: martabak dan terang bulan. </p>
+                    <p>Usaha ini terletak pada Jl. H. Agus Salim No.158, 
+                        Pandean, Kec. Taman, Kota Madiun, Jawa Timur 63129.</p> 
+                    <p>Usaha ini buka pada hari Senin sampai Minggu pada 
+                        pukul 12.00 ~ 00.00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="row">
+            <div class="col">
+                <a href="./index.html">Home</a>
+                <a href="./product.php">Products</a>
+                <a href="./about.html">About</a>
+            </div>
+
+        </div>
+
+        <p class="copyright-text">Copyright 2024</p>
+    </div>
+
+
+
+
+
+</body>
+</html>
